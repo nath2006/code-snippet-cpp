@@ -1,0 +1,20 @@
+{
+  "name": "code-snippet-cpp",
+  "displayName": "Code Snippet Cpp",
+  "description": "Code Snippet For Starting Project CPP",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
