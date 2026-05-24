@@ -3,6 +3,7 @@
   "displayName": "Code Snippet Cpp",
   "description": "Code Snippet For Starting Project CPP",
   "version": "0.0.1",
+  "publisher": "nath2006",
   "engines": {
     "vscode": "^1.120.0"
   },
