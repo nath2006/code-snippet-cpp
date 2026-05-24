@@ -1,65 +1,393 @@
-# code-snippet-cpp README
+# Code Snippet CPP
+<img src="./images/image.png">
+# Features
 
-Code Snippet For CPP
+This extension provides snippets for:
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Fast Input Output
+- Competitive Programming Template
+- Vector
+- Pair
+- Loop
+- Debug Macro
+- Typedef
+- Sorting
+- Binary Search
+- Graph
+- BFS
+- DFS
+- Dijkstra
+- Segment Tree
 
 ---
 
-## Working with Markdown
+# How To Use
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+1. Install the extension
+2. Open a `.cpp` file
+3. Type the snippet prefix
+4. Press:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+```txt
+Ctrl + Space
+```
 
-## For more information
+or press:
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+```txt
+Tab
+```
 
-**Enjoy!**
+---
+
+# Snippet List
+
+## 1. Basic C++ Template
+
+### Prefix
+
+```txt
+cppstartbasic
+```
+
+### Function
+
+Create a basic C++ program template.
+
+### Output
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    return 0;
+}
+```
+
+---
+
+# 2. Fast IO
+
+### Prefix
+
+```txt
+cppfastio
+```
+
+### Function
+
+Enable fast input output for faster execution when reading large data.
+
+### Output
+
+```cpp
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+```
+
+---
+
+# 3. Competitive Programming Template
+
+### Prefix
+
+```txt
+cppcp
+```
+
+### Function
+
+Create a complete Competitive Programming template with:
+- typedef
+- macro
+- fast io
+
+---
+
+# 4. Vector
+
+### Prefix
+
+```txt
+cppvector
+```
+
+### Function
+
+Create a C++ vector.
+
+### Output
+
+```cpp
+vector<int> v;
+```
+
+---
+
+# 5. Pair
+
+### Prefix
+
+```txt
+cpppair
+```
+
+### Function
+
+Create a pair.
+
+### Output
+
+```cpp
+pair<int, int> p;
+```
+
+---
+
+# 6. For Loop
+
+### Prefix
+
+```txt
+cppfor
+```
+
+### Function
+
+Create a for loop.
+
+### Output
+
+```cpp
+for (int i = 0; i < n; i++) {
+
+}
+```
+
+---
+
+# 7. Reverse For Loop
+
+### Prefix
+
+```txt
+cpprfor
+```
+
+### Function
+
+Reverse loop.
+
+---
+
+# 8. While Loop
+
+### Prefix
+
+```txt
+cppwhile
+```
+
+### Function
+
+Create a while loop.
+
+---
+
+# 9. Debug Macro
+
+### Prefix
+
+```txt
+cppdebug
+```
+
+### Function
+
+Display debug variables quickly.
+
+### Output
+
+```cpp
+#define debug(x) cout << #x << " = " << x << endl;
+```
+
+---
+
+# 10. Typedef
+
+### Prefix
+
+```txt
+cpptypedef
+```
+
+### Function
+
+Shortcut for common Competitive Programming data types.
+
+### Output
+
+```cpp
+using ll = long long;
+using pii = pair<int, int>;
+```
+
+---
+
+# 11. Sorting
+
+### Prefix
+
+```txt
+cppsort
+```
+
+### Function
+
+Ascending sort.
+
+### Output
+
+```cpp
+sort(v.begin(), v.end());
+```
+
+---
+
+# 12. Binary Search
+
+### Prefix
+
+```txt
+cppbinary
+```
+
+### Function
+
+Binary search template.
+
+---
+
+# 13. Graph
+
+### Prefix
+
+```txt
+cppgraph
+```
+
+### Function
+
+Graph adjacency list template.
+
+---
+
+# 14. BFS
+
+### Prefix
+
+```txt
+cppbfs
+```
+
+### Function
+
+Breadth First Search template.
+
+---
+
+# 15. DFS
+
+### Prefix
+
+```txt
+cppdfs
+```
+
+### Function
+
+Recursive Depth First Search template.
+
+---
+
+# 16. Dijkstra
+
+### Prefix
+
+```txt
+cppdijkstra
+```
+
+### Function
+
+Dijkstra shortest path template.
+
+---
+
+# 17. Segment Tree
+
+### Prefix
+
+```txt
+cppsegtree
+```
+
+### Function
+
+Segment Tree template for:
+- range query
+- point update
+
+---
+
+# Requirements
+
+No additional configuration required.
+
+---
+
+# Known Issues
+
+No known issues yet.
+
+---
+
+# Release Notes
+
+## 1.0.0
+
+- Initial Release
+- Added Competitive Programming snippets
+- Added Graph snippets
+- Added Segment Tree snippet
+
+---
+
+# How To Test The Extension
+
+1. Press `F5`
+2. Open a `.cpp` file
+3. Type a snippet
+4. Press `Ctrl + Space`
+
+Example:
+
+```txt
+cppcp
+```
+
+---
+
+# Marketplace Keywords
+
+- cpp
+- c++
+- competitive programming
+- snippets
+- algorithm
+- data structure
+
+---

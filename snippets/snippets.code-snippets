@@ -10,7 +10,287 @@
       "    return 0;",
       "}"
     ],
-    "description": "Template basic I/O C++"
+    "description": "Basic C++ template"
+  },
+
+  "C++ Fast IO": {
+    "prefix": "cppfastio",
+    "body": [
+      "ios::sync_with_stdio(false);",
+      "cin.tie(nullptr);"
+    ],
+    "description": "Fast IO"
+  },
+
+  "C++ CP Template": {
+    "prefix": "cppcp",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "using ll = long long;",
+      "using pii = pair<int, int>;",
+      "using vi = vector<int>;",
+      "using vll = vector<long long>;",
+      "",
+      "#define pb push_back",
+      "#define all(x) (x).begin(), (x).end()",
+      "#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);",
+      "",
+      "int main() {",
+      "    fastio",
+      "",
+      "    $0",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Competitive programming template"
+  },
+
+  "C++ Vector": {
+    "prefix": "cppvector",
+    "body": [
+      "vector<${1:int}> ${2:v};"
+    ],
+    "description": "Vector template"
+  },
+
+  "C++ Pair": {
+    "prefix": "cpppair",
+    "body": [
+      "pair<${1:int}, ${2:int}> ${3:p};"
+    ],
+    "description": "Pair template"
+  },
+
+  "C++ For Loop": {
+    "prefix": "cppfor",
+    "body": [
+      "for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++) {",
+      "    $0",
+      "}"
+    ],
+    "description": "For loop"
+  },
+
+  "C++ Reverse For Loop": {
+    "prefix": "cpprfor",
+    "body": [
+      "for (int ${1:i} = ${2:n} - 1; ${1:i} >= 0; ${1:i}--) {",
+      "    $0",
+      "}"
+    ],
+    "description": "Reverse for loop"
+  },
+
+  "C++ While Loop": {
+    "prefix": "cppwhile",
+    "body": [
+      "while (${1:condition}) {",
+      "    $0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+
+  "C++ Debug": {
+    "prefix": "cppdebug",
+    "body": [
+      "#define debug(x) cout << #x << \" = \" << x << endl;"
+    ],
+    "description": "Debug macro"
+  },
+
+  "C++ Typedef": {
+    "prefix": "cpptypedef",
+    "body": [
+      "using ll = long long;",
+      "using pii = pair<int, int>;",
+      "using vi = vector<int>;",
+      "using vll = vector<long long>;"
+    ],
+    "description": "Common typedef"
+  },
+
+  "C++ Sort Asc": {
+    "prefix": "cppsort",
+    "body": [
+      "sort(${1:v}.begin(), ${1:v}.end());"
+    ],
+    "description": "Sort ascending"
+  },
+
+  "C++ Sort Desc": {
+    "prefix": "cppsortdesc",
+    "body": [
+      "sort(${1:v}.rbegin(), ${1:v}.rend());"
+    ],
+    "description": "Sort descending"
+  },
+
+  "C++ Binary Search": {
+    "prefix": "cppbinary",
+    "body": [
+      "int left = 0, right = ${1:n} - 1;",
+      "",
+      "while (left <= right) {",
+      "    int mid = left + (right - left) / 2;",
+      "",
+      "    if (${2:arr}[mid] == ${3:target}) {",
+      "        break;",
+      "    }",
+      "    else if (${2:arr}[mid] < ${3:target}) {",
+      "        left = mid + 1;",
+      "    }",
+      "    else {",
+      "        right = mid - 1;",
+      "    }",
+      "}"
+    ],
+    "description": "Binary search"
+  },
+
+  "C++ Graph": {
+    "prefix": "cppgraph",
+    "body": [
+      "int ${1:n}, ${2:m};",
+      "cin >> ${1:n} >> ${2:m};",
+      "",
+      "vector<vector<int>> graph(${1:n} + 1);",
+      "",
+      "for (int i = 0; i < ${2:m}; i++) {",
+      "    int u, v;",
+      "    cin >> u >> v;",
+      "",
+      "    graph[u].push_back(v);",
+      "    graph[v].push_back(u);",
+      "}"
+    ],
+    "description": "Graph adjacency list"
+  },
+
+  "C++ BFS": {
+    "prefix": "cppbfs",
+    "body": [
+      "vector<int> visited(${1:n} + 1, 0);",
+      "queue<int> q;",
+      "",
+      "q.push(${2:start});",
+      "visited[${2:start}] = 1;",
+      "",
+      "while (!q.empty()) {",
+      "    int node = q.front();",
+      "    q.pop();",
+      "",
+      "    for (int next : ${3:graph}[node]) {",
+      "        if (!visited[next]) {",
+      "            visited[next] = 1;",
+      "            q.push(next);",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "description": "BFS"
+  },
+
+  "C++ DFS": {
+    "prefix": "cppdfs",
+    "body": [
+      "void dfs(int node, vector<vector<int>>& graph, vector<int>& visited) {",
+      "    visited[node] = 1;",
+      "",
+      "    for (int next : graph[node]) {",
+      "        if (!visited[next]) {",
+      "            dfs(next, graph, visited);",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "description": "DFS recursive"
+  },
+
+  "C++ Dijkstra": {
+    "prefix": "cppdijkstra",
+    "body": [
+      "vector<int> dist(${1:n} + 1, INT_MAX);",
+      "priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;",
+      "",
+      "dist[${2:start}] = 0;",
+      "pq.push({0, ${2:start}});",
+      "",
+      "while (!pq.empty()) {",
+      "    auto [d, node] = pq.top();",
+      "    pq.pop();",
+      "",
+      "    if (d > dist[node]) continue;",
+      "",
+      "    for (auto [next, weight] : ${3:graph}[node]) {",
+      "        if (dist[node] + weight < dist[next]) {",
+      "            dist[next] = dist[node] + weight;",
+      "            pq.push({dist[next], next});",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "description": "Dijkstra shortest path"
+  },
+
+  "C++ Segment Tree": {
+    "prefix": "cppsegtree",
+    "body": [
+      "struct SegmentTree {",
+      "    int n;",
+      "    vector<long long> tree;",
+      "",
+      "    SegmentTree(vector<int>& arr) {",
+      "        n = arr.size();",
+      "        tree.assign(4 * n, 0);",
+      "        build(arr, 1, 0, n - 1);",
+      "    }",
+      "",
+      "    void build(vector<int>& arr, int node, int left, int right) {",
+      "        if (left == right) {",
+      "            tree[node] = arr[left];",
+      "            return;",
+      "        }",
+      "",
+      "        int mid = (left + right) / 2;",
+      "",
+      "        build(arr, node * 2, left, mid);",
+      "        build(arr, node * 2 + 1, mid + 1, right);",
+      "",
+      "        tree[node] = tree[node * 2] + tree[node * 2 + 1];",
+      "    }",
+      "",
+      "    long long query(int node, int left, int right, int ql, int qr) {",
+      "        if (qr < left || right < ql) return 0;",
+      "",
+      "        if (ql <= left && right <= qr) return tree[node];",
+      "",
+      "        int mid = (left + right) / 2;",
+      "",
+      "        return query(node * 2, left, mid, ql, qr) +",
+      "               query(node * 2 + 1, mid + 1, right, ql, qr);",
+      "    }",
+      "",
+      "    void update(int node, int left, int right, int idx, int val) {",
+      "        if (left == right) {",
+      "            tree[node] = val;",
+      "            return;",
+      "        }",
+      "",
+      "        int mid = (left + right) / 2;",
+      "",
+      "        if (idx <= mid)",
+      "            update(node * 2, left, mid, idx, val);",
+      "        else",
+      "            update(node * 2 + 1, mid + 1, right, idx, val);",
+      "",
+      "        tree[node] = tree[node * 2] + tree[node * 2 + 1];",
+      "    }",
+      "};"
+    ],
+    "description": "Segment tree"
   }
 }
-
