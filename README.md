@@ -1,5 +1,6 @@
 # Code Snippet CPP
-<img src="./images/image.png">
+<img src="./images/image.png"> </img>
+
 # Features
 
 This extension provides snippets for:
